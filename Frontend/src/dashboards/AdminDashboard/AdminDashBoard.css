@@ -1,0 +1,80 @@
+/* Layout Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-color: #0f172a; /* Your existing dark color */
+  color: #f8fafc;
+ 
+}
+
+/* Fixed Header */
+.dashboard-header {
+  padding: 1rem 2rem;
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Scrollable Content Area */
+.dashboard-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Grid System for Forms and Lists */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 2rem;
+  align-items: start;
+}
+
+.dashboard-grid.single-column { grid-template-columns: 1fr; }
+
+/* Responsive Grid: Stacks on small screens */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modern Card Template for all sections */
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: #38bdf8; /* Light blue accent */
+  font-size: 1.1rem;
+}
+
+/* Section Spacing */
+.stats-section {
+  width: 100%;
+}
+
+/* Custom Scrollbar for Main Content */
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+.dashboard-content::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+.dashboard-content::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}

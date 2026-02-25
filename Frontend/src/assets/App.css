@@ -1,0 +1,131 @@
+:root {
+  --bg-primary: #0f172a;      /* Main background */
+  --bg-secondary: #1e293b;    /* Card & Sidebar background */
+  --accent-primary: #38bdf8;  /* Blue accent */
+  --text-main: #f8fafc;       /* Bright text */
+  --text-muted: #94a3b8;      /* Grey text */
+  --border-color: #334155;    /* Standard border */
+  --success: #22c55e;
+  --danger: #ef4444;
+  --transition: 0.3s ease;
+}
+
+/* 2. CORE RESET - Essential for edge-to-edge layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  /* Removes those red gaps by ensuring everything is 100% width */
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden; /* Recommended for Fixed Dashboards */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. GLOBAL UTILITIES (Apply these classes anywhere) */
+
+/* The "Glass" Card Template */
+.card-standard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Standard Button */
+.btn-base {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* 4. FORM DEFAULTS - Standardizes all Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: white;
+  margin-top: 8px;
+  transition: border-color var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 5. TABLE DEFAULTS - Standardizes all Lists */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Fixes horizontal overflow */
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 6. CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

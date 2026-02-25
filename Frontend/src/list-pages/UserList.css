@@ -1,0 +1,63 @@
+/* UserList.css */
+.user-list-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light grey background */
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-list-title {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Ensures corners stay rounded */
+}
+
+.styled-table thead tr {
+  background-color: #007bff; /* Professional Blue */
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1; 
+  transition: background-color 0.2s ease;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #007bff;
+}
+
+/* Action Buttons */
+.btn-edit, .btn-delete {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.btn-edit { background-color: #ffc107; color: #000; }
+.btn-delete { background-color: #dc3545; color: #fff; }
+
+.btn-edit:hover, .btn-delete:hover {
+  opacity: 0.8;
+}

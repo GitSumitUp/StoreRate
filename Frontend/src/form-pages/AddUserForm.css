@@ -1,0 +1,95 @@
+:root {
+  --primary-blue: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-slate: #f8fafc;
+  --border-color: #73aef2;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+form {
+  width: 500px;
+  margin: 10px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--border-color);
+}
+
+form h3 {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+/* Placeholder styling */
+input::placeholder {
+  color: #cbd5e1;
+}
+
+/* Hover & Focus states */
+input:hover, select:hover {
+  border-color: #cbd5e1;
+}
+
+input:focus, select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+/* Button styling */
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 480px) {
+  form {
+    margin: 20px;
+    padding: 24px;
+  }
+}
